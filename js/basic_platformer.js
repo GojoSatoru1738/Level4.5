@@ -85,6 +85,7 @@ function animate()
 		player.x++;
 		player.vx = 0;
 	}
+
 	while(platform0.hitTestPoint(player.right()) && player.vx >=0)
 	{
 		player.x--;
@@ -121,6 +122,11 @@ function animate()
 	{
 		player.x++;
 	}
+
+	while(platform1.hitTestPoint(player.right()))
+	{
+		player.x--;
+	}
 	
 	//---------Objective: Save Me!---------------------------------------------------------------------------------------------------- 
 	//---------Add a wall that will stop the player from falling--------------------------------------------------------------------------------
@@ -139,6 +145,7 @@ function animate()
 	
 	
 	platform0.drawRect();
+	platform1.drawRect();
 	platform2.drawRect();
 	
 	player.drawRect();
